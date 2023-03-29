@@ -17,7 +17,7 @@ class BaseCAM:
                  compute_input_gradient: bool = False,
                  uses_gradients: bool = True) -> None:
         # Change eval ethod to val for yolov8
-        self.model = model.val()
+        self.model = model
         self.target_layers = target_layers
         self.cuda = use_cuda
         if self.cuda:
